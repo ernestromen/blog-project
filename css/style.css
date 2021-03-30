@@ -1,0 +1,15 @@
+
+.min-h750 {
+  min-height: 750px;
+}
+.dropdown-toggle-no-arrow::after {
+  display: none;
+}
+.bg{
+
+  background-image: url("background1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
