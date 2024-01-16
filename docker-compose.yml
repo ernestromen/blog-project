@@ -1,0 +1,28 @@
+# docker-compose.yml
+version: "3"
+
+services:
+  php-app:
+    build:
+      context: .
+    ports:
+      - "8000:80"
+    volumes:
+      - ./actualapp:/var/www/html
+  mysql_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8101:3306"
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      PMA_ARBITRARY: 1
+    ports:
+      - "8080:80"
+    depends_on:
+      - php-app
+      - mysql_db

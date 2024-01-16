@@ -6,7 +6,6 @@ $page_title = 'Blog Page';
 
 $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
 
-  
 mysqli_query($link, "SET NAMES utf8");
 $sql = "SELECT u.name,up.profile_image,p.*,DATE_FORMAT(p.date,'%d/%m/%Y %H:%i:%s') pdate FROM posts p 
         JOIN users u ON u.id = p.user_id 
@@ -16,7 +15,6 @@ $sql = "SELECT u.name,up.profile_image,p.*,DATE_FORMAT(p.date,'%d/%m/%Y %H:%i:%s
         
 
 $result = mysqli_query($link, $sql);
-
 
 ?>
 
