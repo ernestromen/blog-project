@@ -6,7 +6,7 @@ services:
     build:
       context: .
     ports:
-      - "8000:80"
+      - "80:80"
     volumes:
       - ./actualapp:/var/www/html
   mysql_db:
