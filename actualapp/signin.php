@@ -86,12 +86,12 @@ if (isset($_POST['submit'])) {
     <section id="main-top-content">
       <div class="row">
         <div class="col mt-5">
-          <h1 class="display-3 text-danger">Sign in with your account</h1>
+          <h1 class="display-3 text-danger mt-5">Sign in with your account</h1>
         </div>
       </div>
     </section>
     <section id="signin-form-content">
-      <div class="row">
+      <div class="row mb-5">
         <div class="col-lg-6 mt-3">
           <form action="" method="POST" autocomplete="off" novalidate="novalidate">
             <input type="hidden" name="csrf_token" value="<?= $token; ?>">
