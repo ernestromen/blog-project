@@ -20,8 +20,10 @@ $errors = [
 ];
 
 if (isset($_POST['submit'])) {
-  
-  if (isset($_SESSION['csrf_token']) && isset($_POST['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token']) {
+  // var_dump($_SESSION['csrf_token']);
+  // var_dump($_POST['csrf_token']);
+  // die;   
+  if (isset($_SESSION['csrf_token']) && isset($_POST['csrf_token'])) {
 
     $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
