@@ -97,13 +97,13 @@ $main_url = "http://" . $_SERVER['SERVER_NAME'];
                            <?php else : ?>
 
                             <li class="nav-item">
-                              <a class="nav-link text-white" href="profile.php">
+                              <a class="nav-link text-dark" href="profile.php">
                                 <img width="30" height="30" class="rounded-circle mr-3" src="images/<?= $_SESSION['user_image']; ?>">
                                 <?= htmlentities($_SESSION['user_name']); ?>
                               </a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link text-white" href="logout.php">Logout</a>
+                              <a class="nav-link text-dark" href="logout.php">Logout</a>
                             </li>
                           <?php endif; ?>
 
