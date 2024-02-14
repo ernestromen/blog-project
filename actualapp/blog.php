@@ -24,7 +24,7 @@ $result = mysqli_query($link, $sql);
     <section id="main-about-content">
       <div class="row">
         <div class="col mt-5">
-          <h1 class="display-3 text-dark"> Blog Page</h1>
+          <h1 class="display-3 text-dark mt-5"> Blog Page</h1>
           <?php if (user_auth()) : ?>
          
             <a class="btn btn-primary" href="add_post.php"><i class="fas fa-plus-circle"></i> Add New Post</a>
@@ -39,7 +39,7 @@ $result = mysqli_query($link, $sql);
             <h3>Recent Posts -</h3>
           </div>
           <?php while ($post = mysqli_fetch_assoc($result)) : ?>
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-3 mb-3">
               <div class="card">
                 <div class="card-header">
                   <img width="30" src="images/<?= $post['profile_image']; ?>" class="rounded-circle mr-3">
